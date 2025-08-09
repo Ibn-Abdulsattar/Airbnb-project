@@ -1,34 +1,60 @@
-<nav class="navbar nav-nature navbar-border navbar-expand-md  sticky-top bg-white">
+<nav class="navbar navbar-expand-md sticky-top" style="background: #111; padding: 0.8rem 1rem; font-family: Arial, sans-serif;">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/"><i class="fa-regular fa-circle-location-arrow"></i></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+
+        <!-- Brand Logo -->
+        <a class="navbar-brand" href="/" style="color: #4B0082; font-size: 1.5rem;">
+            <i class="fa-regular fa-circle-location-arrow"></i>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" style="border: none;">
+            <span class="navbar-toggler-icon" style="background-color: white; border-radius: 3px;"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">            <div class="navbar-nav">
-                <a class="nav-link" href="/">Explore</a>
+
+        <!-- Navbar Content -->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            
+            <!-- Left Links -->
+            <div class="navbar-nav">
+                <a class="nav-link" href="/" style="color: white; padding: 0.5rem 1rem;">Explore</a>
             </div>
+
+            <!-- Search Bar -->
             <div class="navbar-nav ms-auto">
                 <form class="d-flex" action="/" role="search">
-                    <input class="form-control me-2 search-inp rounded-pill" type="search" name="search"
-                        value="<%= typeof search !== 'undefined' ? search : '' %>" placeholder="Search destinations"
-                        aria-label="Search">
+                    <input class="form-control me-2 rounded-pill" 
+                        type="search" 
+                        name="search"
+                        value="<%= typeof search !== 'undefined' ? search : '' %>"
+                        placeholder="Search destinations"
+                        aria-label="Search"
+                        style="border: none; padding: 0.5rem 1rem; outline: none;">
+                    
                     <% if (typeof category !=='undefined' ) { %>
                         <input type="hidden" name="category" value="<%= category %>">
-                        <% } %>
-                            <button class="btn search-btn rounded-pill" type="submit"><i
-                                    class="fa-solid fa-magnifying-glass me-2"></i>Search</button>
+                    <% } %>
+
+                    <button class="btn rounded-pill" 
+                        type="submit" 
+                        style="background: #4B0082; color: white; padding: 0.5rem 1.2rem; border: none;">
+                        <i class="fa-solid fa-magnifying-glass me-2"></i>Search
+                    </button>
                 </form>
             </div>
+
+            <!-- Right Links -->
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/new">Airbnb your home</a>
+                <a class="nav-link" href="/new" style="color: white; padding: 0.5rem 1rem;">Airbnb your home</a>
+                
                 <% if(curruser){ %>
-                    <a class="nav-link" href="/logout"><b>Log out</b></a>
-                    <%} else{ %>
-                        <a class="nav-link active" aria-current="page" href="/signup"><b>Sign up</b></a>
-                        <a class="nav-link" href="/login"><b>Log in</b></a>
-                        <%}%>
+                    <a class="nav-link" href="/logout" style="color: white; padding: 0.5rem 1rem;"><b>Log out</b></a>
+                <% } else { %>
+                    <a class="nav-link active" aria-current="page" href="/signup" style="color: #4B0082; padding: 0.5rem 1rem;"><b>Sign up</b></a>
+                    <a class="nav-link" href="/login" style="color: white; padding: 0.5rem 1rem;"><b>Log in</b></a>
+                <% } %>
             </div>
+
         </div>
     </div>
 </nav>
