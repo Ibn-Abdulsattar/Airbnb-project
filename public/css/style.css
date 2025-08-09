@@ -165,3 +165,21 @@ body {
   height: 50vh;
   margin-bottom: 10px;
 }
+
+    /* Custom dark theme toggle */
+    .custom-switch {
+        width: 50px;
+        height: 25px;
+        background-color: #444;
+        border: none;
+        transition: 0.3s;
+    }
+    .custom-switch:checked {
+        background-color: #4B0082; /* Purple accent */
+    }
+    .custom-switch:focus {
+        box-shadow: none;
+    }
+    .custom-switch:checked::before {
+        transform: translateX(1.2rem);
+    }
