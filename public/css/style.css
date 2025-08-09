@@ -165,3 +165,10 @@ body {
   height: 50vh;
   margin-bottom: 10px;
 }
+
+/* Make text white only from md (≥768px) screens and up */
+@media (min-width: 768px) {
+  .nav-link.text-md-white {
+    color: white !important;
+  }
+}

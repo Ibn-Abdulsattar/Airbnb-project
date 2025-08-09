@@ -4,6 +4,7 @@
         <!-- Brand Logo -->
         <a class="navbar-brand" href="/" style="color: #4B0082; font-size: 1.5rem;">
             <i class="fa-regular fa-circle-location-arrow"></i>
+            <span class="d-md-none ms-1" style="color: #fff;">WanderLust</span>
         </a>
 
         <!-- Mobile Toggle -->
@@ -17,13 +18,13 @@
             
             <!-- Left Links -->
             <div class="navbar-nav">
-                <a class="nav-link" href="/" style="color: white !important; padding: 0.5rem 1rem;">WanderLust</a>
+                <a class="nav-link text-black text-md-white" href="/" style="padding: 0.5rem 1rem;">WanderLust</a>
             </div>
 
             <!-- Search Bar -->
             <div class="navbar-nav ms-auto">
                 <form class="d-flex" action="/" role="search">
-                    <input class="form-control me-2 rounded-pill" 
+                    <input class="form-control me-2 border rounded-pill" 
                         type="search" 
                         name="search"
                         value="<%= typeof search !== 'undefined' ? search : '' %>"
@@ -31,7 +32,7 @@
                         aria-label="Search"
                         style="border: none; padding: 0.5rem 1rem; outline: none;">
                     
-                    <% if (typeof category !=='undefined' ) { %>
+                    <% if (typeof category !== 'undefined') { %>
                         <input type="hidden" name="category" value="<%= category %>">
                     <% } %>
 
@@ -45,13 +46,13 @@
 
             <!-- Right Links -->
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/new" style="color: white !important; padding: 0.5rem 1rem;">Airbnb your home</a>
+                <a class="nav-link text-black text-md-white" href="/new" style="padding: 0.5rem 1rem;">Airbnb your home</a>
                 
                 <% if(curruser){ %>
-                    <a class="nav-link" href="/logout" style="color: white !important; padding: 0.5rem 1rem;"><b>Log out</b></a>
+                    <a class="nav-link text-black text-md-white" href="/logout" style="padding: 0.5rem 1rem;"><b>Log out</b></a>
                 <% } else { %>
-                    <a class="nav-link active" aria-current="page" href="/signup" style="color: #fff !important; padding: 0.5rem 1rem;"><b>Sign up</b></a>
-                    <a class="nav-link" href="/login" style="color: white !important; padding: 0.5rem 1rem;"><b>Log in</b></a>
+                    <a class="nav-link text-black text-md-white" href="/signup" style="padding: 0.5rem 1rem;"><b>Sign up</b></a>
+                    <a class="nav-link text-black text-md-white" href="/login" style="padding: 0.5rem 1rem;"><b>Log in</b></a>
                 <% } %>
             </div>
 
