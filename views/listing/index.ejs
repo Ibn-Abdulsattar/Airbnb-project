@@ -4,70 +4,70 @@
     <div id="filters" class="row ">
         <div class="mx-auto col-10 col-md-8  ">
             <div class="slider">
-                <a href="/listings?category=Trending">
+                <a href="/?category=Trending">
                     <div class="filter">
                         <div><i class="fa-solid fa-fire"></i></div>
                         <p>Trending</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Rooms">
+                <a href="/?category=Rooms">
                     <div class="filter">
                         <div><i class="fa-solid fa-bed"></i></div>
                         <p>Rooms</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Amazing views">
+                <a href="/?category=Amazing views">
                     <div class="filter">
                         <div><i class="fa-duotone fa-window-frame-open"></i></div>
                         <p>Amazing views</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Iconic cities">
+                <a href="/?category=Iconic cities">
                     <div class="filter">
                         <div><i class="fa-solid fa-mountain-city"></i></div>
                         <p>Iconic cities</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Surfing">
+                <a href="/?category=Surfing">
                     <div class="filter">
                         <div><i class="fa-solid fa-scalpel-line-dashed"></i></div>
                         <p>Surfing</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Amazing pools">
+                <a href="/?category=Amazing pools">
                     <div class="filter">
                         <div><i class="fa-duotone fa-person-swimming"></i></div>
                         <p>Amazing pools</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Beach">
+                <a href="/?category=Beach">
                     <div class="filter">
                         <div><i class="fa-solid fa-umbrella-beach"></i></div>
                         <p>Beach</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Cabins">
+                <a href="/?category=Cabins">
                     <div class="filter">
                         <div><i class="fa-solid fa-cabin"></i></div>
                         <p>Cabins</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Lakefront">
+                <a href="/?category=Lakefront">
                     <div class="filter">
                         <div><i class="fa-solid fa-warehouse"></i></div>
                         <p>Lakefront</p>
                     </div>
                 </a>
 
-                <a href="/listings?category=Castles">
+                <a href="/?category=Castles">
                     <div class="filter">
                         <div><i class="fa-solid fa-castle"></i></div>
                         <p>Castles</p>
@@ -88,7 +88,7 @@
 
         <div class="row  row-cols-md-3 row-cols-sm-2 row-cols-xs-1">
             <% for(let listing of allListings){ %>
-                <a class="listing-link" href="/listings/<%=listing._id%>">
+                <a class="listing-link" href="/<%=listing._id%>">
                     <div class="card col listing-card">
                         <img src="<%=listing.image.url%>" class="card-img-top" style="height: 20rem;" alt="...">
                         <div class="card-img-overlay"></div>

@@ -37,8 +37,8 @@
                 </div>
                 <% if(curruser && listing.owner._id.equals(curruser._id)){ %>
                     <div class="btns d-flex mt-3">
-                        <a href="/listings/<%=listing._id%>/edit" class="btn btn-danger">Edit</a>
-                        <form class="delete_listing" action="/listings/<%=listing._id%>/?_method=DELETE" method="post"
+                        <a href="/<%=listing._id%>/edit" class="btn btn-danger">Edit</a>
+                        <form class="delete_listing" action="/<%=listing._id%>/?_method=DELETE" method="post"
                             onsubmit="return confirm('Are you sure. You want to delete!')">
                             <button class="btn btn-dark offset-2">Delete</button>
                         </form>
@@ -51,7 +51,7 @@
             <div class="col-8 offset-3">
                 <hr>
                 <h4>Leave a Review</h4>
-                <form action="/listings/<%=listing._id%>/reviews" method="post"
+                <form action="/<%=listing._id%>/reviews" method="post"
                     class="p-3 border rounded bg-light needs-validation" novalidate>
                     <div class="mb-3">
                         <label for="rating" class="form-label">Rating</label>
@@ -106,7 +106,7 @@
                                     </div>
 
                                     <% if( review.author._id.equals(curruser._id)){ %>
-                                        <form action="/listings/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE"
+                                        <form action="/<%=listing._id%>/reviews/<%=review._id%>?_method=DELETE"
                                             method="POST" class="mb-2">
                                             <button class="btn btn-outline-danger">delete</button>
                                         </form>

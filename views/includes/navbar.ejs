@@ -1,15 +1,15 @@
 <nav class="navbar nav-nature navbar-border navbar-expand-md  sticky-top bg-white">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/listings"><i class="fa-regular fa-circle-location-arrow"></i></a>
+        <a class="navbar-brand" href="/"><i class="fa-regular fa-circle-location-arrow"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">            <div class="navbar-nav">
-                <a class="nav-link" href="/listings">Explore</a>
+                <a class="nav-link" href="/">Explore</a>
             </div>
             <div class="navbar-nav ms-auto">
-                <form class="d-flex" action="/listings" role="search">
+                <form class="d-flex" action="/" role="search">
                     <input class="form-control me-2 search-inp rounded-pill" type="search" name="search"
                         value="<%= typeof search !== 'undefined' ? search : '' %>" placeholder="Search destinations"
                         aria-label="Search">
@@ -21,7 +21,7 @@
                 </form>
             </div>
             <div class="navbar-nav ms-auto">
-                <a class="nav-link" href="/listings/new">Airbnb your home</a>
+                <a class="nav-link" href="/new">Airbnb your home</a>
                 <% if(curruser){ %>
                     <a class="nav-link" href="/logout"><b>Log out</b></a>
                     <%} else{ %>

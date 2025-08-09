@@ -36,7 +36,7 @@ module.exports.showListing = async (req, res, next) => {
 
     if (!listing) {
         req.flash("error", "Listing you requested does not exist!");
-        return res.redirect("/listings");  // ❗ Return added
+        return res.redirect("/");  // ❗ Return added
     }
 
     res.render("./listing/show.ejs", { listing });
@@ -64,7 +64,7 @@ module.exports.createListing = async (req, res, next) => {
     console.log(output);
 
     req.flash("success", "New listing was created");
-    res.redirect("/listings");
+    res.redirect("/");
 };
 
 module.exports.renderEditForm = async (req, res, next) => {
@@ -72,7 +72,7 @@ module.exports.renderEditForm = async (req, res, next) => {
     const listing = await Listing.findById(id);
     if (!listing) {
         req.flash("error", "Listing you requested for does not exist!");
-        return res.redirect("/listings");
+        return res.redirect("/");
     }
     let originalImgUrl = listing.image.url;
     originalImgUrl = originalImgUrl.replace("/upload", "/upload/w_250");
@@ -86,7 +86,7 @@ module.exports.updateListing = async (req, res, next) => {
 
     if (!listing) {
         req.flash("error", "Listing not found!");
-        return res.redirect("/listings");
+        return res.redirect("/");
     }
 
     Object.assign(listing, req.body.Listing);
@@ -98,7 +98,7 @@ module.exports.updateListing = async (req, res, next) => {
 
     await listing.save();
     req.flash("success", "Listing was updated");
-    res.redirect(`/listings/${listing._id}`);
+    res.redirect(`/${listing._id}`);
 };
 
 
@@ -106,5 +106,5 @@ module.exports.destroyListing = async (req, res, next) => {
     let { id } = req.params;
     await Listing.findByIdAndDelete(id);
     req.flash("success", "Listing was deleted");
-    res.redirect("/listings");
+    res.redirect("/");
 };
